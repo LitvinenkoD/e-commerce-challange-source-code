@@ -1,0 +1,82 @@
+
+.header{
+  background-color: #0C0C0C
+}
+
+.header_wrapper{
+  position: relative;
+}
+
+.header-container{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-block: 15px;
+}
+
+.header_hamburger{
+  width: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(50%, 110%);
+}
+
+.header_h1{
+  color: white;
+  font-size: 50px;
+  padding-top: 10px;
+  font-weight: 900;
+  width: fit-content;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.header_desktop-menu{
+  color: white;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 25px;
+
+  >*{
+    cursor: pointer;
+  }
+}
+
+.header_desktop-menu {
+  li:nth-child(1),
+  li:nth-child(2){
+    position: relative;
+    margin-right: 4px;
+  }
+
+  li:nth-child(1)::after,
+  li:nth-child(2)::after{
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url('../../public/assets/header/arrdown.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    transform: translate(120%, 45%);
+  }
+}
+
+
+
+
+@media screen and (min-width: 800px) {
+  .header-container{
+    justify-content: space-between;
+  }
+  .header_h1{
+    margin: 0;
+  }
+}

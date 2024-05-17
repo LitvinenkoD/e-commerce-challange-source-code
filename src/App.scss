@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+}
+html{
+  font-family: 'muli', sans-serif;
+}
+
+
+//utility
+
+.wrapper{
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-inline: 24px;
+}
+
+.flexbox-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexbox-container-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+

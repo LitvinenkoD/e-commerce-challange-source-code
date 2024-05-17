@@ -1,0 +1,174 @@
+
+
+.Hero{
+  background: linear-gradient(
+    to top,
+    #D0D0D0 5%,
+    #E8E8E8 15%,
+    #F5F5F5 30%,
+    white 50%
+  );
+  padding-bottom: 60px;
+}
+
+.hero_wrapper{
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image-container{
+  background-color: black;
+  height: 350px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 75% 100%, 0 90%);
+
+}
+
+.hero_image{
+  width: 580px;
+  position: absolute;
+  left: 0;
+  transform: translate(-35%, 0);
+
+}
+
+.hero-image-container::after{
+  content: '';
+  background-color: black;
+  opacity: .7;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero_wrapper{
+  width: 100%;
+}
+
+.hero_text_container{
+  align-items: start;
+  justify-content: start;
+}
+
+.hero_heading{
+  font-size: 50px;
+  font-weight: 900;
+  color: white;
+}
+
+.hero_subheading{
+  font-size: 28px;
+  font-weight: bold;
+  color: #C4C4C4;
+}
+
+
+.hero_paragraph-container{
+  width: 100%;
+  margin-top: 60px;
+}
+
+.hero_paragraph{
+  margin-top: 40px;
+  font-size: 18px;
+  color: #333333;
+  font-weight: regular;
+}
+
+
+.hero_specs-heading{
+  margin-top: 60px;
+  font-size: 40px;
+  font-weight: 900;
+  color: #BCBCBC;
+  width: 100%;
+  text-align: center;
+}
+
+
+.hero_specs-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+  width: 100%;
+}
+
+
+
+.hero_grid-item{
+  column-gap: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  >:nth-child(1){
+    color: #9B9B9B;
+    position: relative;
+  }
+
+  >:nth-child(1)::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(150%);
+    width: 75px;
+    height: 8px;
+    background-color: #F37421;
+  }
+
+  >:nth-child(2){
+    color: #343434;
+  }
+}
+
+
+.hero_specs-image{
+  grid-column: 1 / 3;
+  grid-row: 3 / 6;
+  justify-self: center;
+
+  padding-top: 80px;
+}
+
+
+
+
+
+@media screen and (min-width: 800px) {
+  .hero_text_container{
+    justify-content: start;
+  }
+
+  .hero_heading{
+    font-size: 80px;
+  }
+  
+  .hero_subheading{
+    font-size: 40px;
+  }
+
+  .hero_specs-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    width: 100%;
+  }
+
+
+  .hero_specs-image{
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    justify-self: center;
+  
+    padding-top: 80px;
+  }
+
+
+
+}

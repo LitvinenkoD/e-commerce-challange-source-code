@@ -1,0 +1,40 @@
+
+
+
+.TextInsert{
+  padding-block: 80px;
+}
+
+.TextInsertCustom{
+  margin-top: 60px;
+  background: 
+  linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.85) 50%, rgba(0, 0, 0, 0.7) 85%, rgba(0, 0, 0, 0) 100%),
+  url("../../public/assets/textinsert/bg-image.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.TextInsertDefault{
+  background-color: black;
+}
+
+.textinsert-heading{
+  color: #F37421;
+  font-size: 30px;
+}
+
+.textinsert-paragraph{
+  margin-top: 16px;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 800px){
+  .textinsert-heading{
+    font-size: 40px;
+  }
+  
+  .textinsert-paragraph{
+    font-size: 18px;
+  }
+}
